@@ -17,15 +17,18 @@ const useStyles = makeStyles(theme => ({
   navText: {
     paddingLeft: '2%',
   },
+  navBarColor: {
+    backgroundColor: 'grey'
+  }
 }))
 
 const NavbarComponent = () => {
   const classes = useStyles()
   return (
-    <AppBar position="static">
+    <AppBar position="static" className={classes.navBarColor}>
       <Toolbar>
         <ComputerSharpIcon />
-        <Typography variant="title" color="inherit" className={classes.navText}>
+        <Typography variant="inherit" color="inherit" className={classes.navText}>
           <Link href="/" color="inherit">Michael Ngo</Link>
         </Typography>
         <div className={classes.navButtons}>
