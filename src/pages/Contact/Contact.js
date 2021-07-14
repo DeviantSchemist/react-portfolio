@@ -9,6 +9,9 @@ const useStyles = makeStyles({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)'
+  },
+  inputMargin: {
+    marginTop: '15%'
   }
 })
 
@@ -33,7 +36,7 @@ const Contact = () => {
           <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
         </FormControl>
 
-        <TextareaAutosize aria-label="minimum height" minRows={3} placeholder="Minimum 3 rows" />
+        <TextareaAutosize aria-label="minimum height" minRows={8} placeholder="Comments" className={classes.inputMargin} />
       </section>
     </>
   )
