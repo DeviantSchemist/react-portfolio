@@ -29,9 +29,9 @@ const Footer = () => {
           <Typography variant="body1" color="inherit">
             © 2019 Michael Ngo
           </Typography>
-          <GitHubIcon onClick={() => window.location.href='https://github.com/DeviantSchemist'} className={classes.clickableIcon} />
-          <FacebookIcon onClick={() => window.location.href='https://www.facebook.com/michael.ngo.9'} className={classes.clickableIcon} />
-          <LinkedInIcon onClick={() => window.location.href='https://www.facebook.com/michael.ngo.9'} className={classes.clickableIcon}/>
+          <GitHubIcon onClick={() => window.open('https://github.com/DeviantSchemist')} className={classes.clickableIcon} />
+          <FacebookIcon onClick={() => window.open('https://www.facebook.com/michael.ngo.9')} className={classes.clickableIcon} />
+          <LinkedInIcon onClick={() => window.open('https://www.facebook.com/michael.ngo.9')} className={classes.clickableIcon}/>
         </Toolbar>
       </Container>
     </AppBar>
