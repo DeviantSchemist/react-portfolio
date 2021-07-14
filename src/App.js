@@ -1,14 +1,19 @@
-import NavbarComponent from './components/Navbar'
+import Header from './components/Header'
 import About from './pages/About'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 const App = () => {
   return (
     <>
+      <Header />
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <NavbarComponent />
+            <About />
+          </Route>
+        </Switch>
+        <Switch>
+          <Route path="/about">
             <About />
           </Route>
         </Switch>

@@ -1,5 +1,5 @@
-import { AppBar, Toolbar, IconButton, Typography, Button, makeStyles } from '@material-ui/core'
-import MenuIcon from '@material-ui/icons/Menu'
+import { AppBar, Toolbar, Typography, Button, makeStyles, Link } from '@material-ui/core'
+import ComputerSharpIcon from '@material-ui/icons/ComputerSharp'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -11,6 +11,12 @@ const useStyles = makeStyles(theme => ({
   title: {
     flexGrow: 1,
   },
+  navButtons: {
+    marginLeft: 'auto',
+  },
+  navText: {
+    paddingLeft: '2%',
+  },
 }))
 
 const NavbarComponent = () => {
@@ -18,13 +24,19 @@ const NavbarComponent = () => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-          <MenuIcon />
-        </IconButton>
-        <Typography variant="h6" className={classes.title}>
-          News
+        <ComputerSharpIcon />
+        <Typography variant="title" color="inherit" className={classes.navText}>
+          <Link href="/" color="inherit">Michael Ngo</Link>
         </Typography>
-        <Button color="inherit">Login</Button>
+        <div className={classes.navButtons}>
+          <Button href="/about" color="inherit" className={classes.menuButton}>About</Button>
+          <Button href="/projects" color="inherit" className={classes.menuButton}>
+            Projects
+          </Button>
+          <Button href="/contact" color="inherit" className={classes.menuButton}>
+            Contact
+          </Button>
+        </div>
       </Toolbar>
     </AppBar>
   )
