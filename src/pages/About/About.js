@@ -3,6 +3,9 @@ import { makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import Image from 'material-ui-image'
+import profilePic from '../../Assets/Milk.png'
+import { Card, CardActions, CardContent, Button } from '@material-ui/core'
+import PDF from '../../Assets/GeneralResume.pdf'
 
 const useStyles = makeStyles({
   name: {
@@ -16,6 +19,20 @@ const useStyles = makeStyles({
   },
   aboutText: {
     textAlign: 'center'
+  },
+  root: {
+    minWidth: 275,
+  },
+  bullet: {
+    display: 'inline-block',
+    margin: '0 2px',
+    transform: 'scale(0.8)',
+  },
+  title: {
+    fontSize: 14,
+  },
+  pos: {
+    marginBottom: 12,
   }
 })
 
@@ -23,27 +40,31 @@ const About = () => {
   const classes = useStyles()
 
   return (
-    // <div className={classes.name}>
-    //   <Typography variant="h1" gutterBottom>Michael Ngo</Typography>
-    //   <Paper elevation={0} variant="outlined" className={classes.paper}>
-    //     <Typography variant="body1" className={classes.aboutText}>
-    //       Hello my name is Michael. I am an aspiring full stack developer. Here is my portfolio.
-    //       A little about me: my hobbies include playing video games and learning new things.
-    //     </Typography>
-    //   </Paper>
-    // </div>
-
     <>
       <Grid container justifyContent="center">
         <Grid item xs={12}>
           <Typography variant="h1" className={classes.aboutText}>Michael Ngo</Typography>
-          <Typography variant="h5" className={classes.aboutText}>Aspiring full stack developer</Typography>
+          <Typography variant="body1" className={classes.aboutText}>Aspiring Full Stack Developer</Typography>
+          <hr />
         </Grid>
         <Grid item xs={6}>
-          <Image src="../../Assets/Milk.png" />
+          <Image src={profilePic} disableSpinner={true} disableTransition={true} imageStyle={{width: '70%', height: 'auto'}} />
         </Grid>
         <Grid item xs={6}>
-          
+          <Card className={classes.root}>
+            <CardContent>
+              <Typography className={classes.title} color="textSecondary" gutterBottom>
+                About Me
+              </Typography>
+              <Typography variant="body2" component="p">
+                Hello all. This is my portfolio, made with React. I have a love of technology and
+                am currently studying to become a full stack developer. 
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button href={PDF} size="small">Resume</Button>
+            </CardActions>
+          </Card>
         </Grid>
       </Grid>
     </>
