@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import Image from 'material-ui-image'
-import profilePic from '../../Assets/Milk.png'
+import profilePic from '../../Assets/Selfie.jpg'
 import { Card, CardActions, CardContent, Button } from '@material-ui/core'
 import PDF from '../../Assets/GeneralResume.pdf'
 
