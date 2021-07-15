@@ -1,4 +1,4 @@
-import { FormControl, InputLabel, Input, FormHelperText, Typography, makeStyles, TextareaAutosize } from '@material-ui/core'
+import { FormControl, InputLabel, Input, FormHelperText, Typography, makeStyles, TextareaAutosize, Grid } from '@material-ui/core'
 
 const useStyles = makeStyles({
   forms: {
@@ -8,7 +8,8 @@ const useStyles = makeStyles({
     position: 'fixed',
     top: '50%',
     left: '50%',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
+    marginTop: '-4%'
   },
   inputMargin: {
     marginTop: '15%'
@@ -20,7 +21,7 @@ const Contact = () => {
 
   return (
     <>
-      <section className={classes.center}>
+      <Grid className={classes.center}>
         <Typography variant="h2">
           Contact
         </Typography>
@@ -37,7 +38,7 @@ const Contact = () => {
         </FormControl>
 
         <TextareaAutosize aria-label="minimum height" minRows={8} placeholder="Comments" className={classes.inputMargin} />
-      </section>
+      </Grid>
     </>
   )
 }

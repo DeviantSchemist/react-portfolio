@@ -1,14 +1,22 @@
-import { AppBar, Container, Toolbar, Typography, makeStyles, Grid } from '@material-ui/core'
+import { AppBar, Container, Toolbar, Typography, makeStyles, Grid, Hidden } from '@material-ui/core'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 
 const useStyles = makeStyles({
-  root: {
+  container: {
+    minHeight: '100vh',
+    overflow: 'hidden',
+    display: 'block',
+    position: 'relative',
+    paddingBottom: '100px'
+  },
+  footer: {
     position: 'absolute',
     left: 0,
     bottom: 0,
     right: 0,
+    width: '100%',
     backgroundColor: 'grey'
   },
   clickableIcon: {
@@ -17,6 +25,9 @@ const useStyles = makeStyles({
     color: 'yellow'
     },
     marginLeft: '2%'
+  },
+  colorGray: {
+    backgroundColor: 'grey'
   }
 })
 
@@ -24,7 +35,7 @@ const Footer = () => {
   const classes = useStyles()
 
   return (
-    <AppBar position="static" color="primary" className={classes.root}>
+    <AppBar position="static" color="primary" className={classes.colorGray}>
       <Container maxWidth="md">
         <Toolbar>
           <Typography variant="body1" color="inherit">
