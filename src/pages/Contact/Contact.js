@@ -27,12 +27,12 @@ const Contact = () => {
         </Typography>
 
         <FormControl className={classes.forms}>
-          <InputLabel htmlFor="my-input">Name</InputLabel>
+          <InputLabel htmlFor="my-input" required={true}>Name</InputLabel>
           <Input id="my-input" aria-describedby="my-helper-text" />
         </FormControl>
 
         <FormControl className={classes.forms}>
-          <InputLabel htmlFor="my-input">Email address</InputLabel>
+          <InputLabel htmlFor="my-input" required={true}>Email address</InputLabel>
           <Input id="my-input" aria-describedby="my-helper-text" />
           <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
         </FormControl>
