@@ -18,6 +18,10 @@
 
   [Questions](https://github.com/DeviantSchemist/react-portfolio#questions)
 
+  ## NOTICE
+  This application did not deploy correctly on github pages. See below screenshots for proof of the
+  local version working.
+
   ## Description
   A portofolio showcasing my abilities as a developer. Made with React.
 
@@ -36,8 +40,14 @@
   ## Questions
   If you have additional questions, please see below for my contact information.
 
-  ## Screenshot
-  <img src="./src/Assets/ReactPortfolio.png" alt="React Portfolio"/>
+  ## About Page
+  <img src="./src/Assets/About.png" alt="React Portfolio"/>
+
+  ## Project Page
+  <img src="./src/Assets/Projects.png" alt="React Portfolio"/>
+
+  ## Contact Page
+  <img src="./src/Assets/Contact.png" alt="React Portfolio"/>
 
   ## Contact Information
 
