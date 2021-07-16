@@ -3,13 +3,13 @@ import Footer from './components/Footer'
 import About from './pages/About'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 const App = () => {
   return (
     <>
       <Header />
-      <BrowserRouter>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/">
             <About />
@@ -30,7 +30,7 @@ const App = () => {
             <Contact />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </Router>
       <Footer />
     </>
   )
