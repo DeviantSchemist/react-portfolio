@@ -33,6 +33,10 @@ const useStyles = makeStyles({
   },
   pos: {
     marginBottom: 12,
+  },
+  horizontalLine: {
+    width: '70%',
+    marginLeft: '18%'
   }
 })
 
@@ -45,7 +49,7 @@ const About = () => {
         <Grid item xs={12}>
           <Typography variant="h1" className={classes.aboutText}>Michael Ngo</Typography>
           <Typography variant="body1" className={classes.aboutText}>Aspiring Full Stack Developer</Typography>
-          <hr />
+          <hr className={classes.horizontalLine} />
         </Grid>
         <Grid item xs={6}>
           <Image src={profilePic} disableSpinner={true} disableTransition={true} imageStyle={{width: '70%', height: 'auto'}} />
